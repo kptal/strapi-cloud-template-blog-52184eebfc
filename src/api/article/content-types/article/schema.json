@@ -44,7 +44,7 @@
     "blocks": {
       "type": "dynamiczone",
       "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
-    }
+    },
     "why":{ "type": "text",
       "maxLength": 80}
   }
