@@ -23,19 +23,17 @@
     "description": {
       "type": "text"
     },
-    "season": {
-      "type": "integer",
+    "function": {
+      "type": "string",
       "required": true
     },
-    "league": {
-      "type": "string"
+    "profilpircture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
     },
-    "standings": {
-      "type": "richtext"
-    },
-    "topScorers": {
-      "type": "richtext"
-    },
+   
     "lastUpdated": {
       "type": "datetime"
     }
