@@ -4,6 +4,8 @@ const fs = require('fs-extra');
 const path = require('path');
 const mime = require('mime-types');
 const { categories, authors, articles, global, about } = require('../data/data.json');
+const team = require('./api/team/controllers/team');
+const board = require('./api/board/controllers/board');
 
 async function seedExampleApp() {
   const shouldImportSeedData = await isFirstRun();
@@ -244,6 +246,13 @@ async function importSeedData() {
     author: ['find', 'findOne'],
     global: ['find', 'findOne'],
     about: ['find', 'findOne'],
+
+    // Add any other global permissions here
+    // e.g. global: ['find', 'findOne']
+    team: ['find', 'findOne'],
+    board: ['find', 'findOne'],
+    page: ['find', 'findOne']
+
   });
 
   // Create all entries
