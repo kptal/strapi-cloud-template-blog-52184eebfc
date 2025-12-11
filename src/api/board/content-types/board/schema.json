@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boards",
+  "info": {
+    "singularName": "board",
+    "pluralName": "boards",
+    "displayName": "Board",
+    "description": "Leaderboards and standings"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "text"
+    },
+    "season": {
+      "type": "integer",
+      "required": true
+    },
+    "league": {
+      "type": "string"
+    },
+    "standings": {
+      "type": "richtext"
+    },
+    "topScorers": {
+      "type": "richtext"
+    },
+    "lastUpdated": {
+      "type": "datetime"
+    }
+  }
+}

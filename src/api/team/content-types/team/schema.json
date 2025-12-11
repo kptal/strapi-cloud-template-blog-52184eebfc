@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teams",
+  "info": {
+    "singularName": "team",
+    "pluralName": "teams",
+    "displayName": "Team",
+    "description": "Football teams"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "text"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "founded": {
+      "type": "integer"
+    },
+    "country": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "stadium": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::stadium.stadium",
+      "inversedBy": "teams"
+    },
+    "players": {
+      "type": "integer",
+      "default": 0
+    },
+    "titles": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
