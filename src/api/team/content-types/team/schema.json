@@ -38,12 +38,7 @@
     "city": {
       "type": "string"
     },
-    "stadium": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::stadium.stadium",
-      "inversedBy": "teams"
-    },
+   
     "players": {
       "type": "integer",
       "default": 0
